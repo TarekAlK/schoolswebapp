@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --mainColor: 82 82 91;
+      --secondaryColor: 39 39 42;
+      --mainTextColor: 255 255 255;
+      --dimColor: 113 113 122;
+      --btnColor: 17 47 217;
+    }
+    
+    /* .light {
+      --mainColor: 255 255 255;
+      --secondaryColor: 224 242 249;
+      --mainTextColor: 0 0 0;
+      --dimColor: 192 192 192;
+      --btnColor: 124 58 237;
+    } */
+  }
