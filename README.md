@@ -2,7 +2,7 @@ to run this project
 
 - run npm install in the root folder
 - navigate to the frontend folder and run npm install
-- create .env file and include the following
+- in the root folder create .env file and include the following
     - MONGO_URI=  // your mongodb uri
     - PORT=5000
     - JWT_SECRET=abc123  // choose a jwt secret
