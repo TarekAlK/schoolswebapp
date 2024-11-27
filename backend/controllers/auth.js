@@ -51,17 +51,17 @@ const registerTeacher = async (req, res, next) => {
         // }
 
         const transporter = nodemailer.createTransport({
-            host: process.env.MAIL_HOST,
-            port: 587,
-            secure: false, // true for port 465, false for other ports
+            host: process.env.SMTP_HOST,
+            port: parseInt(process.env.SMTP_PORT, 10), //587
+            secure: process.env.SMTP_SECURE, // true for port 465, false for other ports
             auth: {
-              user: process.env.MAIL_USER,
-              pass: process.env.MAIL_PASSWORD,
+              user: process.env.SMTP_USER,
+              pass: process.env.SMTP_PASSWORD,
             },
           });
 
         const info = await transporter.sendMail({
-          from: process.env.MAIL_USER,
+          from: process.env.SMTP_USER,
           to: req.body.email,
           subject: 'Welcome To The Internation School Of The Future Generation',
           text: `Mr ${req.body.name} we are glad to have you aboard with us, we hope you have a pleasant journey at our school.
@@ -109,17 +109,17 @@ const registerStudent = async (req, res, next) => {
         }
 
         const transporter = nodemailer.createTransport({
-            host: process.env.MAIL_HOST,
-            port: 587,
-            secure: false, // true for port 465, false for other ports
+            host: process.env.SMTP_HOST,
+            port: parseInt(process.env.SMTP_PORT, 10), //587
+            secure: process.env.SMTP_SECURE, // true for port 465, false for other ports
             auth: {
-              user: process.env.MAIL_USER,
-              pass: process.env.MAIL_PASSWORD,
+              user: process.env.SMTP_USER,
+              pass: process.env.SMTP_PASSWORD,
             },
           });
 
         const info = await transporter.sendMail({
-          from: process.env.MAIL_USER,
+          from: process.env.SMTP_USER,
           to: req.body.email,
           subject: 'Welcome To The Internation School Of The Future Generation',
           text: `Dear ${req.body.name} we are glad to have you aboard with us, we hope you have a pleasant journey at our school.

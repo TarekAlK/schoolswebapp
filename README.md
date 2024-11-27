@@ -12,8 +12,10 @@ to run this project
     - JWT_LIFETIME=30d
     - COOKIE_HOURS_LIFETIME=24  // do not make it equal to zero
     - COOKIE_DAYS_LIFETIME=30  // do not make it equal to zero
-    - MAIL_HOST=  // for sending automated emails feature
-    - MAIL_USER=  // for sending automated emails feature
-    - MAIL_PASSWORD=  // for sending automated emails feature
+    - SMTP_HOST=  // for sending automated emails feature
+    - SMTP_PORT=  // for sending automated emails feature
+    - SMTP_SECURE=  // true for port 465, false for other ports
+    - SMTP_USER=  // for sending automated emails feature
+    - SMTP_PASSWORD=  // for sending automated emails feature
 
 finally run 'npm run dev' in the root folder and open localhost 5173
